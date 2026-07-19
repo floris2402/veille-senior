@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEILLE SENIOR</title>
+    <!-- Intégration du fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo-container">
+            <!-- Lien ajouté autour du logo pour revenir à l'accueil -->
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Logo AlertMarc" class="logo-img">
+                <span class="logo">VEILLE SENIOR</span>
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            
+            <li><a href="index.html#preview">Aperçu</a></li>
+            <li><a href="delete-data.html">Suppression des données</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Légal</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="hero" id="accueil">
+        <div class="hero-container">
+            <!-- QR Code placé à gauche -->
+            <div class="hero-qrcode">
+                <img src="QR code1.png" alt="QR Code de démonstration" class="qrcode-img">
+            </div>
+            
+            <!-- Contenu texte et bouton à droite -->
+            <div class="hero-content">
+                <h1>VEILLE SENIOR</h1>
+                <p>Application de sécurité vocale pour personnes âgées.</p>
+                <!-- Appel de la fonction Javascript pour le téléchargement -->
+                <button class="btn" onclick="telechargerApp()">Télécharger sur le Play Store</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" id="features">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Points forts de l'application</h2>
+        <div class="features">
+            <div class="feature-card">
+                <span class="icon">📢</span>
+                <h3>Reconnaissance vocale</h3>
+                <p>100% hors-ligne Fonctionne sans internet.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">⚙️</span>
+                <h3>Détection de chute</h3>
+                <p>Alerte automatiquesans action de la personne.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🚗</span>
+                <h3>Localisation précise</h3>
+                <p>Ville + coordonnées GPS + lien Google Maps.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-section" id="preview">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Aperçu de l'interface</h2>
+           <div class="gallery">
+        <div class="gallery-container">
+            <img class="gallery-item gallery-item-1"  src="1.png" alt="" index-1="1">
+            <img class="gallery-item gallery-item-2"  src="2.png" alt="" index-2="2">
+            <img class="gallery-item gallery-item-3"  src="3.png" alt="" index-3="3">
+           
+        </div>
+        <div class="gallery-controls"></div>
+    </div>
+        </div>
+    </div>
+
+<footer>
+    <p>&copy; 2026 VEILLE SENIOR. Tous droits réservés.</p>
+
+    <div class="footer-links">
+        <a href="privacy.html">Mentions Légales & Confidentialité</a>
+        <a href="delete-data.html">Suppression des données</a>
+        <a href="contact.html">Aide & Support</a>
+    </div>
+</footer>
+
+    <!-- Intégration du fichier JavaScript externe -->
+    <script src="script.js"></script>
+</body>
+</html>
