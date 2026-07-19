@@ -1,0 +1,105 @@
+/* --- RESET & BASE --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+header {
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    color: white;
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+.logo-img { height: 45px; width: auto; border-radius: 8px; background-color: white; }
+.logo { font-size: 1.6rem; font-weight: bold; color: white; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: white; text-decoration: none; font-weight: 500; }
+
+/* --- HERO (STRUCTURE CONSERVÉE AVEC QR CODE COALIGNÉ) --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover; background-position: center;
+    color: white; padding: 100px 20px;
+    display: flex; justify-content: center; align-items: center;
+}
+.hero-container {
+    max-width: 1100px; width: 100%;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 40px; text-align: left;
+}
+.hero-qrcode { flex: 0 0 auto; margin-left: 20px; }
+.qrcode-img {
+    width: 180px; height: auto; border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background-color: white; padding: 10px; display: block;
+}
+.hero-content { flex: 1; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 700px; }
+
+.btn {
+    background: #42a5f5; color: white; padding: 14px 30px; border: none;
+    border-radius: 50px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.feature-card { background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+/* --- CARROUSEL (VUE ORDINATEUR) --- */
+.preview-section { background-color: #f1f3f5; width: 100%; padding: 3rem 0; }
+.gallery-container {
+    align-items: center; display: flex;
+    height: 500px; margin: 0 auto; max-width: 600px; position: relative;
+}
+.gallery-item {
+    height: 100%; width: auto; object-fit: contain;
+    opacity: 0; position: absolute; transition: all 0.4s ease-in-out;
+    z-index: 0; border-radius: 15px;
+}
+.gallery-item-1 { left: 25%; height: 70%; opacity: 0.4; transform: translateX(-50%); z-index: 1; }
+.gallery-item-2 { left: 38%; height: 85%; opacity: 0.7; transform: translateX(-50%); z-index: 1; }
+.gallery-item-3 { left: 50%; height: 100%; opacity: 1; transform: translateX(-50%); z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+
+/* --- FOOTER --- */
+footer { background: #222; color: white; text-align: center; padding: 2rem 0; }
+.footer-links a { color: #aaa; margin: 0 10px; text-decoration: none; }
+
+/* --- ADAPTATION MOBILE --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
+    .menu-toggle .bar { width: 25px; height: 3px; background: white; }
+    .nav-links { 
+        display: none; position: absolute; top: 65px; left: 0; 
+        width: 100%; background: #1565c0; flex-direction: column; padding: 1rem; 
+    }
+    .nav-links.active { display: flex; }
+    
+    .hero-container { flex-direction: column-reverse; text-align: center; gap: 30px; }
+    .hero-qrcode { margin-left: 0; }
+    .qrcode-img { width: 150px; margin: 0 auto; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; }
+
+    .gallery-container { height: 350px !important; }
+    .gallery-item { height: 100% !important; width: auto !important; }
+    .gallery-item-1 { left: 15% !important; height: 70% !important; }
+    .gallery-item-2 { left: 32% !important; height: 85% !important; }
+    .gallery-item-3 { left: 50% !important; height: 100% !important; }
+}
