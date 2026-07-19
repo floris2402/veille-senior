@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .legal-content { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .legal-content h2 { color: #1565c0; border-bottom: 2px solid #f1f3f5; padding-bottom: 10px; margin-top: 30px; margin-bottom: 20px; text-transform: uppercase; font-size: 1.2rem; }
+        .legal-content p, .legal-content li { margin-bottom: 15px; color: #555; line-height: 1.7; }
+        .legal-info-grid { display: grid; grid-template-columns: 150px 1fr; gap: 10px; margin-bottom: 20px; }
+        .legal-info-grid div:first-child { font-weight: bold; color: #333; }
+
+         
+        
+        h1 {
+            color: #d32f2f;
+            border-bottom: 2px solid #d32f2f;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-left: 4px solid #1976d2;
+            margin: 20px 0;
+        }
+        .text {
+            margin: 400px;
+
+
+        }
+
+
+
+
+
+       
+     
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Logo AlertMarc" class="logo-img">
+                    <span class="logo">VEILLE SENIOR</span>
+                </a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                
+                <li><a href="index.html#preview">Aperçu</a></li>
+                <li><a href="delete-data.html">Suppression des données</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Légal</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="text" id="text"> 
+    <h1>Politique de Confidentialité d'application "VEILLE SENIOR"</h1>
+    <p><strong>Dernière mise à jour :</strong> Juillet 2026</p>
+
+    <p>L'application <strong>VEILLE SENIOR</strong> est conçue pour assurer la sécurité des personnes âgées en leur permettant de déclencher une alerte par SMS en cas d'urgence ou de chute. Nous accordons une importance capitale à la confidentialité et à la protection de vos données privées. Cette page vous explique de manière transparente comment vos données sont traitées.</p>
+
+    <div class="highlight">
+        <strong>Engagement majeur :</strong> VEILLE SENIOR est une application payante et <strong>ne contient aucune publicité, aucun tracker publicitaire, ni aucun partage commercial de vos données</strong>. La sécurité de l'utilisateur est notre seule priorité.
+    </div>
+
+    <h2>1. Collecte et Utilisation des Données</h2>
+    <p>Toutes les données requises par l'application sont utilisées uniquement pour assurer le service d'alerte SOS. <strong>Aucune donnée personnelle n'est envoyée vers un serveur externe à des fins d'analyse ou de stockage tiers.</strong> Tout reste en local sur votre smartphone.</p>
+
+    <h2>2. Description détaillée des Autorisations (Permissions)</h2>
+    <p>Pour fonctionner correctement, notamment en arrière-plan ou lorsque le téléphone est en veille, SOS vocal utilise les permissions suivantes :</p>
+    <ul>
+        <li><strong>Envoi et réception de SMS (SEND_SMS, RECEIVE_SMS) :</strong> Utilisé pour envoyer un SMS d'alerte contenant votre position aux contacts de votre choix. Un SMS de validation est également envoyé avant d'enregistrer définitivement le numéro d'un proche dans l'application.</li>
+        <li><strong>Accès aux contacts (READ_CONTACTS) :</strong> Permet de sélectionner facilement les numéros de téléphone des proches à alerter directement depuis le répertoire du téléphone.</li>
+        <li><strong>Microphone (RECORD_AUDIO, FOREGROUND_SERVICE_MICROPHONE) :</strong> Nécessaire pour écouter l'alerte vocale. La reconnaissance vocale s'effectue localement sur le téléphone grâce à l'outil Vosk. L'application écoute uniquement pour détecter la phrase clé <em>"j'ai besoin d'aide"</em> et les confirmations <em>"oui"</em> ou <em>"non"</em>. Aucun flux audio n'est enregistré de façon permanente ni transmis sur Internet.</li>
+        <li><strong>Reconnaissance de l'activité et Capteurs (ACTIVITY_RECOGNITION) :</strong> Les capteurs de mouvement du téléphone sont sollicités en permanence afin de détecter instantanément une chute de l'utilisateur, à tout moment.</li>
+        <li><strong>Localisation (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION, FOREGROUND_SERVICE_LOCATION) :</strong> La position de l'appareil est relevée régulièrement et mémorisée localement sur le téléphone. En cas d'alerte (vocale ou chute), la position est actualisée. Si la mise à jour échoue au moment précis de l'urgence, la dernière position connue enregistrée est envoyée par SMS aux proches pour vous localiser.</li>
+        <li><strong>Connexion Internet (INTERNET) :</strong> Cette permission est strictement limitée à deux actions : le premier téléchargement des fichiers de reconnaissance vocale Vosk lors du premier démarrage de l'application, et le fonctionnement des outils de cartographie pour la localisation. Aucun échange de données personnelles n'a lieu.</li>
+        <li><strong>Exécution en arrière-plan et démarrage (WAKE_LOCK, FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED, REQUEST_IGNORE_BATTERY_OPTIMIZATIONS) :</strong> Permet à l'application de rester active de manière permanente, même en veille ou après un redémarrage du téléphone, pour garantir que la détection de chute et l'écoute SOS restent opérationnelles en continu.</li>
+    </ul>
+
+    <h2>3. Stockage et Sécurité des Données</h2>
+    <p>Les numéros de téléphone de vos proches, les configurations d'alertes et les coordonnées de localisation géographique sont stockés <strong>exclusivement dans la mémoire locale de votre appareil</strong>. Nous n'avons aucun accès à ces informations.</p>
+
+    <h2>4. Partage des Données avec des Tiers</h2>
+    <p>Nous ne vendons, n'échangeons ni ne transférons aucune information à des tiers. Les seules transmissions de données existantes sont les SMS envoyés directement depuis votre appareil vers les numéros de téléphone des proches que vous avez vous-même configurés.</p>
+
+    <h2>5. Modifications de la Politique de Confidentialité</h2>
+    <p>Nous pouvons mettre à jour notre politique de confidentialité de temps à autre pour refléter les changements techniques de l'application ou les exigences de Google Play. Nous vous invitons à consulter régulièrement cette page.</p>
+
+    <h2>6. Contact</h2>
+    <p>Pour toute question concernant cette politique de confidentialité ou l'utilisation de vos données, vous pouvez nous contacter à l'adresse e-mail suivante :</p>
+    <p><strong>[ecolo.marc@gmail.com]</strong></p>
+</div>
+<footer>
+    <p>&copy; 2026 VEILLE SENIOR. Tous droits réservés.</p>
+
+    <div class="footer-links">
+        <a href="privacy.html">Mentions Légales & Confidentialité</a>
+        <a href="delete-data.html">Suppression des données</a>
+        <a href="contact.html">Aide & Support</a>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
