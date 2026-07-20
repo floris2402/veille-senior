@@ -4,87 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suppression des données - VEILLE SENIOR</title>
+    <!-- Réutilisation du fichier CSS externe de l'index pour garder le même style -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        /* Styles spécifiques pour mettre en page le texte de cette page tout en respectant la charte graphique */
+        .content-section {
+            padding: 4rem 1rem;
+            background-color: #f9f9f9;
+        }
+        .content-container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 10px;
+        .content-container h1 {
+            color: #1976d2; /* Couleur identique au texte VIDEO de l'index */
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
-        h2 {
-            color: #34495e;
-            margin-top: 25px;
-        }
-        .date {
+        .date-update {
             font-style: italic;
-            color: #7f8c8d;
-            margin-bottom: 20px;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
         }
-        .highlight {
-            background-color: #f8f9fa;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
+        .content-container h2 {
+            color: #333;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
         }
-        ul, ol {
-            padding-left: 20px;
+        .content-container p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.7;
         }
-        li {
-            margin-bottom: 8px;
+        .info-box {
+            background-color: #e3f2fd;
+            border-left: 5px solid #1976d2;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
         }
-        a {
-            color: #3498db;
+        .info-box strong {
+            color: #1976d2;
+        }
+        .content-container ul, .content-container ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .content-container li {
+            margin-bottom: 0.5rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .content-container a {
+            color: #1976d2;
             text-decoration: none;
+            font-weight: bold;
         }
-        a:hover {
+        .content-container a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Suppression des données - VEILLE SENIOR</h1>
-    <p class="date">Dernière mise à jour : Juillet 2026</p>
+<header>
+    <nav>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Logo AlertMarc" class="logo-img">
+                <span class="logo">VEILLE SENIOR</span>
+            </a>
+        </div>
 
-    <p>VEILLE SENIOR ne dispose d'aucun compte en ligne ni d'aucun serveur central. Toutes les données que vous configurez (nom de la personne surveillée, contacts d'urgence, dernière position connue) restent enregistrées uniquement dans la mémoire de votre téléphone. Il n'existe donc pas de compte à supprimer sur un site ou un service distant : la suppression se fait directement depuis l'appareil.</p>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
 
-    <div class="highlight">
-        <strong>À retenir :</strong> aucune action de notre part n'est nécessaire pour supprimer vos données. Vous en gardez la maîtrise complète, directement sur votre téléphone.
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#preview">Aperçu</a></li>
+            <li><a href="delete-data.html">Suppression des données</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Légal</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <div class="content-container">
+            <h1>Suppression des données - VEILLE SENIOR</h1>
+            <div class="date-update">Dernière mise à jour : Juillet 2026</div>
+
+            <p>VEILLE SENIOR ne dispose d'aucun compte en ligne ni d'aucun serveur central. Toutes les données que vous configurez (nom de la personne surveillée, contacts d'urgence, dernière position connue) restent enregistrées uniquement dans la mémoire de votre téléphone. Il n'existe donc pas de compte à supprimer sur un site ou un service distant : la suppression se fait directement depuis l'appareil.</p>
+
+            <div class="info-box">
+                <strong>À retenir :</strong> aucune action de notre part n'est nécessaire pour supprimer vos données. Vous en gardez la maîtrise complète, directement sur votre téléphone.
+            </div>
+
+            <h2>1. Données concernées</h2>
+            <p>Les données stockées localement par l'application sont :</p>
+            <ul>
+                <li>Le nom de la personne surveillée (ou le numéro de chambre)</li>
+                <li>Le nom et le numéro de téléphone des contacts d'urgence enregistrés</li>
+                <li>La dernière position GPS connue, mémorisée localement pour être incluse dans un SMS d'alerte</li>
+            </ul>
+
+            <h2>2. Suppression partielle (un contact ou un identifiant)</h2>
+            <p>Pour supprimer un numéro ou modifier l'identifiant de la personne surveillée, sans désinstaller l'application :</p>
+            <ol>
+                <li>Ouvrez l'application VEILLE SENIOR</li>
+                <li>Appuyez sur le bouton « Paramètres »</li>
+                <li>Supprimez le ou les numéros concernés dans la liste des contacts enregistrés</li>
+            </ol>
+
+            <h2>3. Suppression complète de toutes les données</h2>
+            <p>Pour effacer immédiatement et définitivement l'ensemble des données associées à l'application, deux méthodes sont possibles :</p>
+            <ul>
+                <li><strong>Désinstallation :</strong> supprimez l'application depuis votre téléphone (Paramètres du téléphone &gt; Applications &gt; Veille Senior &gt; Désinstaller). Toutes les données locales sont alors effacées sans possibilité de récupération.</li>
+                <li><strong>Effacement des données de l'application :</strong> sans désinstaller, vous pouvez aussi vider les données depuis Paramètres du téléphone &gt; Applications &gt; Veille Senior &gt; Stockage &gt; Effacer les données. L'application repart alors à zéro, comme lors d'une première installation.</li>
+            </ul>
+
+            <h2>4. Demande de suppression</h2>
+            <p>Aucune donnée n'étant conservée par nos soins sur un serveur, il n'y a pas de délai de traitement à prévoir : la suppression est immédiate dès que vous effectuez l'une des actions ci-dessus sur votre téléphone.</p>
+            <p>Pour toute question concernant vos données ou leur suppression, vous pouvez nous contacter à l'adresse e-mail suivante : <a href="mailto:ecolo.marc@gmail.com">ecolo.marc@gmail.com</a></p>
+        </div>
     </div>
+</section>
 
-    <h2>1. Données concernées</h2>
-    <p>Les données stockées localement par l'application sont :</p>
-    <ul>
-        <li>Le nom de la personne surveillée (ou le numéro de chambre)</li>
-        <li>Le nom et le numéro de téléphone des contacts d'urgence enregistrés</li>
-        <li>La dernière position GPS connue, mémorisée localement pour être incluse dans un SMS d'alerte</li>
-    </ul>
+<footer>
+    <p>&copy; 2026 VEILLE SENIOR. Tous droits réservés.</p>
 
-    <h2>2. Suppression partielle (un contact ou un identifiant)</h2>
-    <p>Pour supprimer un numéro ou modifier l'identifiant de la personne surveillée, sans désinstaller l'application :</p>
-    <ol>
-        <li>Ouvrez l'application VEILLE SENIOR</li>
-        <li>Appuyez sur le bouton « Paramètres »</li>
-        <li>Supprimez le ou les numéros concernés dans la liste des contacts enregistrés</li>
-    </ol>
+    <div class="footer-links">
+        <a href="privacy.html">Mentions Légales & Confidentialité</a>
+        <a href="delete-data.html">Suppression des données</a>
+        <a href="contact.html">Aide & Support</a>
+    </div>
+</footer>
 
-    <h2>3. Suppression complète de toutes les données</h2>
-    <p>Pour effacer immédiatement et définitivement l'ensemble des données associées à l'application, deux méthodes sont possibles :</p>
-    <ul>
-        <li><strong>Désinstallation :</strong> supprimez l'application depuis votre téléphone (Paramètres du téléphone &gt; Applications &gt; Veille Senior &gt; Désinstaller). Toutes les données locales sont alors effacées sans possibilité de récupération.</li>
-        <li><strong>Effacement des données de l'application :</strong> sans désinstaller, vous pouvez aussi vider les données depuis Paramètres du téléphone &gt; Applications &gt; Veille Senior &gt; Stockage &gt; Effacer les données. L'application repart alors à zéro, comme lors d'une première installation.</li>
-    </ul>
-
-    <h2>4. Demande de suppression</h2>
-    <p>Aucune donnée n'étant conservée par nos soins sur un serveur, il n'y a pas de délai de traitement à prévoir : la suppression est immédiate dès que vous effectuez l'une des actions ci-dessus sur votre téléphone.</p>
-    <p>Pour toute question concernant vos données ou leur suppression, vous pouvez nous contacter à l'adresse e-mail suivante : <a href="mailto:ecolo.marc@gmail.com">ecolo.marc@gmail.com</a></p>
-
+    <!-- Réutilisation du script pour assurer le fonctionnement du menu mobile -->
+    <script src="script.js"></script>
 </body>
 </html>
